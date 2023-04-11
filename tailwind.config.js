@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#33748F",
+        secondary: "#6E7274",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -17,5 +18,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

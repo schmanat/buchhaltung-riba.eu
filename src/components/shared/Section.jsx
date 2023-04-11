@@ -1,5 +1,11 @@
-const Section = ({ children }) => {
-  return <div className="max-w-6xl mx-auto py-16 px-3">{children}</div>;
+const Section = ({ children, className }) => {
+  return (
+    <div
+      className={`mx-auto py-16 px-3 ${className ? className : "max-w-5xl"}`}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Section;
