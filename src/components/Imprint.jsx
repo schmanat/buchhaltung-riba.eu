@@ -1,5 +1,5 @@
-import Section from "./shared/Section";
-import Heading from "./ui/Heading";
+import Section from "@/shared/Section";
+import Heading from "@/ui/Heading";
 import { companyConfig } from "@/constants/config";
 
 const Imprint = () => {

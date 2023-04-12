@@ -1,7 +1,7 @@
 import Section from "@/components/shared/Section";
-import { H2, List } from "@/components/ui/Typography";
-import ServiceCard from "./ServiceCard";
-import Heading from "./ui/Heading";
+import { List } from "@/ui/Typography";
+import ServiceCard from "@/components/ServiceCard";
+import Heading from "@/ui/Heading";
 
 const Services = () => {
   return (

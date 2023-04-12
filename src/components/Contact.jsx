@@ -1,5 +1,5 @@
-import Button from "@/components/ui/Button";
-import Heading from "@/components/ui/Heading";
+import Button from "@/ui/Button";
+import Heading from "@/ui/Heading";
 
 const Contact = () => {
   return (

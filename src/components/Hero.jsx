@@ -3,10 +3,8 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "@/components/shared/Logo";
-import Button from "@/components/ui/Button";
-
-// 27697C
+import Logo from "@/shared/Logo";
+import Button from "@/ui/Button";
 
 const navigation = [
   { name: "Dienstleistungen", href: "#dienstleistungen" },

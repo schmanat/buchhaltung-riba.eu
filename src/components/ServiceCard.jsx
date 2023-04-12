@@ -1,5 +1,5 @@
-import { Icons } from "@/components/ui/Icons";
-import { H3 } from "@/components/ui/Typography";
+import { Icons } from "@/ui/Icons";
+import { H3 } from "@/ui/Typography";
 
 const ServiceCard = ({ title, children, icon }) => {
   const Icon = Icons[icon];
