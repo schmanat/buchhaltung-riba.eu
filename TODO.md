@@ -11,3 +11,11 @@
 ## Componenten
 
 - Icons extrahieren (Hero)
+- Varianten erzeugen
+- dark modus entfernen
+
+## Config
+
+- SEO
+- OG
+- Path Alias

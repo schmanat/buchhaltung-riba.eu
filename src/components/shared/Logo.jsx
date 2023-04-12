@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { config } from "@/constants/config";
+import { siteConfig } from "@/constants/config";
 
 const Logo = ({ className }) => {
   return (
@@ -10,7 +10,8 @@ const Logo = ({ className }) => {
         src="/assets/riba-logo.svg"
         width={100}
         height={300}
-        alt={`Logo - ${config.siteName}`}
+        priority
+        alt={`Logo - ${siteConfig.siteName}`}
       />
     </>
   );
