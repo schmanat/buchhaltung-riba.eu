@@ -7,9 +7,9 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const Icons = {
-  euro: <CurrencyEuroIcon />,
-  chartbar: <ChartBarIcon />,
-  users: <UserIcon />,
-  x: <XMarkIcon />,
-  burger: <Bars3Icon />,
+  euro: CurrencyEuroIcon,
+  chartbar: ChartBarIcon,
+  users: UserIcon,
+  x: XMarkIcon,
+  burger: Bars3Icon,
 };

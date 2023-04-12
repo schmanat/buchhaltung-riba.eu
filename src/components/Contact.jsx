@@ -88,7 +88,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="mt-10 mx-auto w-full">
-          <Button>absenden</Button>
+          <Button variant="outline">absenden</Button>
         </div>
       </form>
     </div>
