@@ -2,6 +2,7 @@ import Section from "@/shared/Section";
 import Heading from "@/ui/Heading";
 import { companyConfig } from "@/constants/config";
 import Link from "next/link";
+import ImprintDetails from "./ImprintDetails";
 
 const Imprint = () => {
   return (
@@ -33,6 +34,9 @@ const Imprint = () => {
         <p className="my-4">
           IBAN: {companyConfig.iban} | BIC: {companyConfig.bic}
         </p>
+      </Section>
+      <Section className="text-slate-50 text-lg text-center mx-auto max-w-2xl">
+        <ImprintDetails />
       </Section>
     </div>
   );

@@ -9,7 +9,7 @@ const Services = () => {
       <Section>
         <Heading
           title="Dienstleistungen"
-          subtitle="Entecken Sie was ich alles für Sie tun kann."
+          subtitle="Entecken Sie, was ich alles für Sie tun kann."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard title="Buchhaltung" icon="euro">
