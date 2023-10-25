@@ -34,7 +34,7 @@ const Contact = () => {
               claudia.riba@buchhaltung-riba.eu
             </a>
           </ServiceCard>
-          <ServiceCard title="Anfahrt" icon={"map"}>
+          <ServiceCard title="Standort" icon={"map"}>
             <p className="my-6">Hier finden Sie mich:</p>
             <a
               href="https://www.google.at/maps/place/Industriestra%C3%9Fe+3,+6841+M%C3%A4der/@47.357616,9.6134428,17z/data=!3m1!4b1!4m6!3m5!1s0x479b3dffabf7176b:0x7ebebe4ae9933575!8m2!3d47.3576124!4d9.6160177!16s%2Fg%2F11dzp2typf"
