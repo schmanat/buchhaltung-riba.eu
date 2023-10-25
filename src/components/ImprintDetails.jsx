@@ -1,5 +1,6 @@
 "use client";
 
+import { companyConfig } from "@/constants/config";
 import { H3 } from "./ui/Typography";
 import {
   Accordion,
@@ -24,6 +25,8 @@ const ImprintContent = () => (
       6841 Mäder
       <br />
       Österreich
+      <br />
+      UID-Nummer: {companyConfig.uid}
     </address>
     <p>
       <a

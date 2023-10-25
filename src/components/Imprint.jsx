@@ -34,6 +34,7 @@ const Imprint = () => {
         <p className="my-4">
           IBAN: {companyConfig.iban} | BIC: {companyConfig.bic}
         </p>
+        <p className="my-4">UID-Nummer: {companyConfig.uid}</p>
       </Section>
       <Section className="text-slate-50 text-lg text-center mx-auto max-w-2xl">
         <ImprintDetails />

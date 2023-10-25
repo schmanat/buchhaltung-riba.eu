@@ -15,4 +15,5 @@ export const companyConfig = {
   },
   iban: "AT68 2060 4031 0315 5291",
   bic: "SPFKAT2B",
+  uid: "ATU79768734",
 };
