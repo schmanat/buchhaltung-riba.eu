@@ -5,13 +5,35 @@ import ServiceCard from "./ServiceCard";
 const Contact = () => {
   return (
     <div
-      className="isolatepx-6 py-24 sm:py-32 lg:px-8 bg-primary/90"
+      className="isolate px-6 py-24 sm:py-32 lg:px-8 bg-primary/90"
       id="standort"
     >
       <Heading title={"Haben Sie Fragen?"} />
 
       <div className="flex items-center justify-center space-y-4 max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ServiceCard
+            title="Öffnungszeiten"
+            icon={"clock"}
+            className="col-span-3"
+          >
+            <p className="my-6">Wann erreichen Sie mich: </p>
+            <div className="font-semibold">
+              <p>
+                <span className="mr-2">Di: </span>
+                8:30 - 11:00 Uhr
+              </p>
+              <p>
+                <span className="mr-2">Fr: </span>
+                8:30 - 14:00 Uhr
+              </p>
+            </div>
+            <p className="my-6">
+              Termine werden nach Vereinbarung während der Geschäftszeiten
+              vergeben. Anliegen können auf der Mailbox oder per E-Mail
+              mitgeteilt werden und werden schnellstmöglich bearbeitet.
+            </p>
+          </ServiceCard>
           <ServiceCard title="Telefon" icon={"phone"}>
             <p className="my-6">Rufen Sie mich an: </p>
             <a
