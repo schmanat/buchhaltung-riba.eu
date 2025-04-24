@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from 'next/script'
 
 export const metadata = {
   title: "Buchhaltung Claudia Riba",
@@ -11,6 +12,11 @@ export default function RootLayout({ children }) {
       <body className="bg-white text-secondary min-h-screen">
         <main className="">{children}</main>
       </body>
+      <Script
+        src="https://stats.cloud.schman.dev/script.js"
+        data-website-id="14bf1924-0058-4002-9ef6-518c347caf82"
+        defer
+      />
     </html>
   );
 }
