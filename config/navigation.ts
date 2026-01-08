@@ -1,0 +1,21 @@
+import { NavigationItem } from "@/types";
+
+export const navigationConfig: NavigationItem[] = [
+  {
+    href: "#dienstleistungen",
+    label: "Dienstleistungen"
+  },
+  {
+    href: "#ueber-mich",
+    label: "Über mich"
+  },
+  // {
+  //   href: "#kontakt",
+  //   label: "Kontakt"
+  // },
+  // {
+  //   href: "impressum",
+  //   label: "Impressum",
+  //   isPage: true
+  // },
+]
