@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 import { Card, CardContent } from "./ui/card"
-import { timelineItems } from "@/config/about"
+import { timelineItems } from "@/config/page"
 
 const About = () => (
   <section id="ueber-mich" className="section-padding">

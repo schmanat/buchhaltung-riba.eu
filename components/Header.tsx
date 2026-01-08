@@ -10,10 +10,13 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Logo from '@/public/logo.svg'
+import { useScrollToSection } from "@/hooks/useScrollToSection";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState<Boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(false)
+
+  const scrollToSection = useScrollToSection(setIsOpen)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,14 +25,6 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll)
   }, []);
-
-  const scrollToSection = (href: string) => {
-    setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  };
 
   return (
     <motion.header
@@ -63,10 +58,7 @@ const Header = () => {
                 href={navItem.href}
                 key={navItem.href}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(navItem.href)
-                }}
+                onClick={() => scrollToSection(navItem.href)}
               >
                 {navItem.label}
               </Link>
@@ -97,10 +89,7 @@ const Header = () => {
                     href={navItem.href}
                     key={navItem.href}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(navItem.href)
-                    }}
+                    onClick={() => scrollToSection(navItem.href)}
                   >
                     {navItem.label}
                   </Link>

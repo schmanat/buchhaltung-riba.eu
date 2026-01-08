@@ -4,16 +4,14 @@ import { Separator } from "@radix-ui/react-separator";
 import Logo from '@/public/logo.svg'
 import Image from "next/image";
 import Link from "next/link";
+import { companyConfig } from "@/config/page";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { useState } from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const [isOpen, setIsOpen] = useState(false)
+  const scrollToSection = useScrollToSection(setIsOpen)
 
   return (
     <footer className="bg-slate-700 text-background">
@@ -25,7 +23,7 @@ const Footer = () => {
                 <Image src={Logo} alt="Buchhaltung Riba Logo" className="h-12 w-auto brightness-0 invert" />
               </Link>
               <div className="flex flex-cols leading-none">
-                <span className="text-lg font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">Buchhaltung</span>
+                <span className="text-lg font-semibold tracking-tight text-white group-hover:text-primary transition-colors">Buchhaltung</span>
                 <span className="text-lg font-light tracking-widest text-primary uppercase ml-2">Riba</span>
               </div>
             </div>
@@ -42,25 +40,25 @@ const Footer = () => {
               <li>
                 <Link
                   href="#dienstleistungen"
-                  onClick={(e) => { e.preventDefault(); scrollToSection("#dienstleistungen"); }}
+                  onClick={() => scrollToSection("#dienstleistungen")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   Dienstleistungen
                 </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#ueber-mich"
-                  onClick={(e) => { e.preventDefault(); scrollToSection("#ueber-mich"); }}
+                  onClick={() => scrollToSection("#ueber-mich")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   Über mich
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
                   href="#kontakt"
-                  onClick={(e) => { e.preventDefault(); scrollToSection("#kontakt"); }}
+                  onClick={() => scrollToSection("#kontakt")}
                   className="text-background/70 hover:text-background transition-colors"
                 >
                   Kontakt
@@ -80,17 +78,17 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Kontakt</h4>
             <ul className="space-y-2 text-sm text-background/70">
-              <li>Musterstraße 1</li>
-              <li>6841 Mäder, Österreich</li>
+              <li>{companyConfig.contact.address}</li>
+              <li>{companyConfig.contact.plz} {companyConfig.contact.city}, Österreich</li>
               <li className="pt-2">
-                <a href="mailto:buchhaltung@beispiel.at" className="hover:text-background transition-colors">
-                  buchhaltung@beispiel.at
-                </a>
+                <Link href={`mailto:${companyConfig.contact.email}`} className="hover:text-background transition-colors">
+                  {companyConfig.contact.email}
+                </Link>
               </li>
               <li>
-                <a href="tel:+43552312345" className="hover:text-background transition-colors">
-                  +43 5523 12345
-                </a>
+                <Link href={`tel:${companyConfig.contact.phone}`} className="hover:text-background transition-colors">
+                  {companyConfig.contact.phoneLabel}
+                </Link>
               </li>
             </ul>
           </div>

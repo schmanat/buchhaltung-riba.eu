@@ -31,3 +31,19 @@ export type ContactInfo = {
   value: string,
   href: string | null
 }
+
+export type CompanyConfig = {
+  name: string,
+  owner: string,
+  contact: {
+    address: string,
+    plz: string,
+    city: string,
+    phone: string,
+    phoneLabel: string,
+    email: string
+  },
+  iban: string,
+  bic: string,
+  uid: string
+}

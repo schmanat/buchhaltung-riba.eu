@@ -2,12 +2,13 @@
 
 import { motion } from "motion/react"
 import { Button } from "./ui/button"
-import { ArrowDown, CalendarDays, Mail } from "lucide-react"
+import { ArrowDown, Mail } from "lucide-react"
 import Link from "next/link"
 import Portrait from '@/public/portrait.jpg'
 import Image from "next/image"
-import { trustItems } from "@/config/hero"
+import { trustItems } from "@/config/page"
 import { Card, CardContent } from "./ui/card"
+import { companyConfig } from "@/config/page"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -43,7 +44,7 @@ const Hero = () => {
               variants={itemVariants}
               className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
             >
-              Mäder, Vorarlberg
+              {companyConfig.contact.city}, Vorarlberg
             </motion.span>
 
             <motion.h1
@@ -71,7 +72,7 @@ const Hero = () => {
                 asChild
                 className="gap-2"
               >
-                <a href="mailto:claudia.riba@buchhatlung-riba.eu">
+                <a href={`mailto:${companyConfig.contact.email}`}>
                   <Mail className="w-4 h-4" />
                   E-Mail senden
                 </a>

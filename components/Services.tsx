@@ -1,6 +1,6 @@
 "use client"
 
-import { services } from "@/config/services";
+import { services } from "@/config/page";
 import { motion } from "motion/react"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Check } from "lucide-react";
