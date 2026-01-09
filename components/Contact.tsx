@@ -64,7 +64,7 @@ const Contact = () => (
               </div>
 
               {/* CTA Area */}
-              <div className="bg-primary p-6 lg:p-8 flex flex-col justify-center items-center text-center text-primary-foreground rounded-r-xl">
+              <div className="bg-primary p-6 lg:p-8 flex flex-col justify-center items-center text-center text-primary-foreground rounded-b-xl md:rounded-r-xl">
                 <Mail className="w-12 h-12 mb-4 opacity-80" />
                 <h3 className="text-xl font-semibold mb-2">Jetzt Kontakt aufnehmen</h3>
                 <p className="opacity-90 mb-6 text-sm">

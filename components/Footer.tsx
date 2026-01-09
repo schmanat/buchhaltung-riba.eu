@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Navigation</h4>
+            <h4 className="font-semibold text-white mb-4">Navigation</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Kontakt</h4>
+            <h4 className="font-semibold text-white mb-4">Kontakt</h4>
             <ul className="space-y-2 text-sm text-background/70">
               <li>{companyConfig.contact.address}</li>
               <li>{companyConfig.contact.plz} {companyConfig.contact.city}, Österreich</li>
