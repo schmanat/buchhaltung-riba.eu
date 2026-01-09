@@ -101,7 +101,7 @@ const Hero = () => {
               <Image
                 src={Portrait}
                 priority
-                fetchPriority="hight"
+                fetchPriority="high"
                 sizes="100vw"
                 alt="Portrait der Buchhalterin"
                 className="w-64 h-80 sm:w-72 sm:h-96 lg:w-80 lg:h-112 object-cover rounded-2xl shadow-xl"
