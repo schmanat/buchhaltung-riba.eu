@@ -6,7 +6,7 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build:static
+RUN npm run build
 
 # --- run stage (nginx) ---
 FROM nginx:alpine
