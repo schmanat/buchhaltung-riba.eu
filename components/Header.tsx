@@ -7,14 +7,19 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
-import { Menu } from "lucide-react";
+import { ArrowLeft, Menu } from "lucide-react";
 import Image from "next/image";
 import Logo from '@/public/logo.svg'
 import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { usePathname } from "next/navigation";
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(false)
+
+  const pathname = usePathname();
+  const isHome = pathname === '/'
 
   const scrollToSection = useScrollToSection(setIsOpen)
 
@@ -53,22 +58,34 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navigationConfig.map((navItem) => (
-              <Link
-                href={navItem.href}
-                key={navItem.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
-                onClick={() => scrollToSection(navItem.href)}
-              >
-                {navItem.label}
+            {isHome ? (
+              <>
+                {navigationConfig.map((navItem) => (
+                  <Link
+                    href={navItem.href}
+                    key={navItem.href}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm font-medium"
+                    onClick={() => scrollToSection(navItem.href)}
+                  >
+                    {navItem.label}
+                  </Link>
+                ))}
+                <Button
+                  onClick={() => scrollToSection('#kontakt')}
+                  className="ml-2 cursor-pointer"
+                >
+                  Kontakt
+                </Button>
+              </>
+            ) : (<Button variant="outline" asChild>
+              <Link href="/" className="gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                Zurück zur Startseite
               </Link>
-            ))}
-            <Button
-              onClick={() => scrollToSection('#kontakt')}
-              className="ml-2 cursor-pointer"
-            >
-              Kontakt
-            </Button>
+            </Button>)
+            }
+
+
           </div>
 
           {/* Mobile Navigation */}

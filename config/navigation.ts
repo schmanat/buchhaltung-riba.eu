@@ -9,13 +9,8 @@ export const navigationConfig: NavigationItem[] = [
     href: "#ueber-mich",
     label: "Über mich"
   },
-  // {
-  //   href: "#kontakt",
-  //   label: "Kontakt"
-  // },
-  // {
-  //   href: "impressum",
-  //   label: "Impressum",
-  //   isPage: true
-  // },
+  {
+    href: "impressum",
+    label: "Impressum"
+  }
 ]
