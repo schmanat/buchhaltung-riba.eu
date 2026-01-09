@@ -1,22 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans"
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const dynamic = "force-static";
 export const revalidate = false;
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -98,14 +88,13 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background`}
+        className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-background`}
       >
         <Header />
         <main>
           {children}
         </main>
         <Footer />
-        <Toaster />
       </body>
     </html>
   );

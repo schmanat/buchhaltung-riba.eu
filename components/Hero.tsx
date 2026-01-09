@@ -100,6 +100,9 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-linear-to-br from-primary/20 to-primary/5 rounded-3xl -z-10 blur-2xl" />
               <Image
                 src={Portrait}
+                priority
+                fetchPriority="hight"
+                sizes="100vw"
                 alt="Portrait der Buchhalterin"
                 className="w-64 h-80 sm:w-72 sm:h-96 lg:w-80 lg:h-112 object-cover rounded-2xl shadow-xl"
               />
