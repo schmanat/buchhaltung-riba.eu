@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:static": "serve -s out -l 3000",
     "lint": "eslint"
   },
   "dependencies": {
