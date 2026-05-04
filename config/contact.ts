@@ -5,8 +5,8 @@ export const contactInfo: ContactInfo[] = [
   {
     icon: Mail,
     label: "E-Mail",
-    value: "claudia.riba@buchhaltung-riba.eut",
-    href: "mailto:claudia.riba@buchhaltung-riba.eut",
+    value: "claudia.riba@buchhaltung-riba.eu",
+    href: "mailto:claudia.riba@buchhaltung-riba.eu",
   },
   {
     icon: Phone,

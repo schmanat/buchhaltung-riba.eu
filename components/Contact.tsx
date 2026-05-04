@@ -5,6 +5,7 @@ import { Card, CardContent } from "./ui/card"
 import { contactInfo } from "@/config/contact"
 import { Mail } from "lucide-react"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 
 const Contact = () => (
@@ -76,9 +77,9 @@ const Contact = () => (
                   asChild
                   className="bg-background text-slate-700 hover:bg-background/90"
                 >
-                  <a href="mailto:buchhaltung@beispiel.at">
+                  <Link href="mailto:claudia.riba@buchhaltung-riba.eu">
                     E-Mail senden
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
